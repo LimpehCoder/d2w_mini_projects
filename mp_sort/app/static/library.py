@@ -25,17 +25,14 @@ def generate():
 	document.getElementById("generate").innerHTML = array_str
 
 
-def sortnumber1():
-	'''	This function is used in Exercise 1.
-		The function is called when the sort button is clicked.
-
-		You need to do the following:
-		- get the list of numbers from the "generate" HTML id, use document.getElementById(id).innerHTML
-		- create a list of integers from the string of numbers
-		- call your sort function, either bubble sort or insertion sort
-		- create a string of the sorted numbers and store it in array_str
-	'''
-	pass
+def insertion_sort(array):
+    n = len(array)
+    for out_index in range(1, n):
+        inn_index = out_index
+        while inn_index > 0 and array[inn_index] < array[inn_index - 1]:
+            array[inn_index], array[inn_index - 1] = array[inn_index - 1], array[inn_index]
+            inn_index -= 1
+    return array
 
 	array_str = None
 	
