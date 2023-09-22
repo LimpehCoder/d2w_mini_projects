@@ -2,7 +2,11 @@ from org.transcrypt.stubs.browser import *
 import random
 
 def gen_random_int(number, seed):
-	pass
+    result = []
+    for i in range(number):
+        result.append(i)
+    random.Random(seed).shuffle(result)
+    return result
 
 def generate():
 	number = 10
@@ -25,7 +29,7 @@ def generate():
 	document.getElementById("generate").innerHTML = array_str
 
 
-def insertion_sort(array):
+def sortnumber1(array):
     n = len(array)
     for out_index in range(1, n):
         inn_index = out_index
